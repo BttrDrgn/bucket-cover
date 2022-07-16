@@ -3,13 +3,6 @@
 
 void init()
 {
-	if (MH_Initialize() == MH_OK);
-	{
-		Sexy::LogicMgr::setup();
-
-		MH_EnableHook(MH_ALL_HOOKS);
-	}
-
 	callbacks::on(callbacks::type::beginturn2, []()
 	{
 		Sexy::LogicMgr::ActivateFreeBallCover(1);
